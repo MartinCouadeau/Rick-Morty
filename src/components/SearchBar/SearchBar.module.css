@@ -1,0 +1,18 @@
+.divPrincipal {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.input {
+    height: 2em;
+    margin-right: 3em;
+    border-radius: 0.4em;
+    height: 30px;
+}
+
+.button {
+    background-color: rgb(52, 223, 52);
+    color: rgb(250, 235, 215);
+    padding: 5px;
+}

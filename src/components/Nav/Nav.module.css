@@ -1,0 +1,9 @@
+.divPrincipal {
+    background-color: rgb(91, 187, 187);
+    height: 50px;
+}
+
+.nav {
+    display: flex;
+    justify-content: end;
+}

@@ -11,8 +11,6 @@ export default function Card(props) {
             <h2 className={styles.charGender}>{props.gender}</h2>
             <h2 className={styles.charSpecie}>{props.species}</h2>
          </div>
-         
-         
       </div>
    );
 }

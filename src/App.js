@@ -1,5 +1,5 @@
 import './App.css'
-import React, {useState} from 'react'
+import {useState} from 'react'
 import Cards from './components/Cards/Cards.jsx'
 import Nav from './components/Nav/Nav.jsx'
 import characters from './data.js'
@@ -7,23 +7,28 @@ import characters from './data.js'
 
 function App () {
 
-  const example = {
-    name: 'Morty Smith',
-    species: 'Human',
-    gender: 'Male',
-    image: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
- };
-
-  const [personajes, setPersonajes] = useState({
-    personajesArr:[]
-  })
 
 
-  const onSearch = () => {
-    setPersonajes({
-      ...personajes,
-      personajesArr:example
-    })
+  const [characters, setCharacters] = useState([])
+
+  const onClose = (id) => {
+    setCharacters(
+      characters.filter(
+        character =>character.id !== id
+    ))
+  }
+
+
+  const onSearch = (character) => {
+    fetch(`https://rickandmortyapi.com/api/character/${character}`)
+      .then((response) => response.json())
+      .then((data) => {
+         if (data.name) {
+            setCharacters((oldChars) => [...oldChars, data]);
+          } else {
+            window.alert('No hay personajes con ese ID');
+          }
+      });
   }
 
   return (
@@ -32,7 +37,10 @@ function App () {
       <br/>
       <br/>
       <div>
-        <Cards characters={example}/>
+        <Cards 
+          onClose={onClose} 
+          characters={characters}
+        />
       </div>
     </div>
   )

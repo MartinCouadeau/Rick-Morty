@@ -1,0 +1,23 @@
+.divPrincipal {
+    margin: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.divDatos {
+    color: aliceblue;
+    background-color: rgba(58, 54, 48, 0.7);
+    block-size: fit-content;
+    width: 30%;
+    text-align: left;
+    padding: 10px;
+}
+
+.foto {
+    display: flex;
+    position: relative;
+    right: 200px;
+    top: 50px;
+}

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { Link, useParams } from "react-router-dom"
 import styles from './Detail.module.css'
 
-export default function Detail(props) {
+export default function Detail() {
 
     const {detailId} = useParams()
     const [character, setCharacter] = useState("")
@@ -26,7 +26,6 @@ export default function Detail(props) {
     return (
         <div className={styles.divPrincipal}>
           <div className={styles.divDatos}>
-            <Link to = {"/"}><button>Home</button></Link>
             <h1>Nombre: {character.name ? character.name : ""}</h1>
             <br></br>
             <h3>Status: {character.status ? character.status : ""}</h3>

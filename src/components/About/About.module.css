@@ -1,0 +1,35 @@
+.divPrincipal {
+    margin: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.infoPersonal {
+    background-color: rgba(124, 111, 93, 0.7);
+    color: aliceblue;
+    width: 45%;
+    block-size: fit-content;
+    text-align: left;
+    padding: 10px;
+}
+
+.infoProyecto {
+    position: relative;
+    background-color:  rgba(124, 111, 93, 0.7);
+    color: aliceblue;
+    width: 45%;
+    block-size: fit-content;
+    text-align: right;
+    right: 2em;
+    padding: 10px;
+}
+
+.h1Proyecto {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    block-size: fit-content;
+}

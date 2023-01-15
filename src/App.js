@@ -21,8 +21,9 @@ function App () {
   }
 
 
-  const onSearch = (character) => {
-    fetch(`https://rickandmortyapi.com/api/character/${character}`)
+  const onSearch = (id) => {
+    if (!characters.some((character) => character.id === parseInt(id))) {
+      fetch(`https://rickandmortyapi.com/api/character/${id}`)
       .then((response) => response.json())
       .then((data) => {
          if (data.name) {
@@ -31,6 +32,7 @@ function App () {
             window.alert('No hay personajes con ese ID');
           }
       });
+    }
   }
 
   return (

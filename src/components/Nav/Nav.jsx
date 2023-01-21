@@ -7,8 +7,10 @@ export default function Nav(props) {
     return (
         <div className={styles.divPrincipal}    >
             <div className={styles.divBotones}>
-                <Link to={"/"}><button className={styles.button}>Home</button></Link>
+                <Link to={"/home"}><button className={styles.button}>Home</button></Link>
                 <Link to={"/about"}><button className={styles.button}>About</button></Link> 
+                <Link to={"/favorites"}><button className={styles.button}>Favorites</button></Link>
+                <Link to={"/portfolio"}><button className={styles.button}>Portfolio</button></Link>
             </div>
             <nav className={styles.nav}>
                 <SearchBar onSearch={props.onSearch}/>

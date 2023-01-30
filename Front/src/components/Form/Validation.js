@@ -9,9 +9,9 @@ export function Validate(inputs) {
     if (!regexEmail.test(inputs.username)) {
       errors.username = 'Debe ser un correo electrónico';
     }
-    if (inputs.username.length > 35) {
+    /*if (inputs.username.length > 35) {
         errors.username = 'no puede tener más de 35 caracteres.';
-      }
+      } Uncaught TypeError: Cannot read properties of undefined (reading 'length') ???????????????????????*/ 
     if (!regexPass.test(inputs.password)) {
       errors.password = "tiene que tener al menos un número, una mayuscula, una minuscula y entre 6 y 10 caracteres";
     } 

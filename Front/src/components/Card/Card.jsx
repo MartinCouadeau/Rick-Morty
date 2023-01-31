@@ -32,7 +32,7 @@ export default function Card(props) {
 
    return (
       <div className={styles.divPrincipal}>
-         <button className={styles.closeButton} onClick={props.onClose}>X</button>
+         <button className={styles.closeButton} onClick={(props.onClose, () => handleFavorite(props))}>X</button>
          {
             isFav ? (
                <button onClick={() => handleFavorite(props)}>❤️</button>

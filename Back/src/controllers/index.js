@@ -1,6 +1,10 @@
-const axios = require("axios")
+const { getCharById } = require("./getCharById")
+const { getCharDetail } = require("./getCharDetail")
+const { getFav } = require("./getFav")
+const { postFav } = require("./postFav")
+const { deleteFav } = require("./deleteFav")
 
-
+/*
 var fav = []
 
 
@@ -70,7 +74,7 @@ const deleteFav = (req, res) => {
         res.status(400).json({error: "personaje no encontrado en lista de favoritos"})
     }
 }
-
+*/
 
 module.exports = {
     getCharById,

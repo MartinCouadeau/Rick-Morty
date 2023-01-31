@@ -1,6 +1,7 @@
 import './App.css'
 import {useState, useEffect} from 'react'
 import Cards from './components/Cards/Cards.jsx'
+import Card from './components/Card/Card.jsx'
 import Nav from './components/Nav/Nav.jsx'
 import About from './components/About/About.jsx'
 import Detail from './components/Detail/Detail'
@@ -27,7 +28,7 @@ function App () {
       navigate("/home")
     }
   }
-
+ 
   const onClose = (id) => {
     setCharacters(
       characters.filter(

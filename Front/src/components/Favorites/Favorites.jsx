@@ -1,5 +1,4 @@
 import React from "react";
-import { isElementOfType } from "react-dom/test-utils";
 import { useSelector, useDispatch } from "react-redux";
 import { filterCards, orderCards } from "../../redux/actions";
 import Card from "../Card/Card";
@@ -31,7 +30,7 @@ export default function Favorites(props) {
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                         <option value="Genderles">Genderles</option>
-                        <option value="Unknown">Unknown</option>
+                        <option value="unknown">Unknown</option>
                     </select>
                 </div>
                 <div>

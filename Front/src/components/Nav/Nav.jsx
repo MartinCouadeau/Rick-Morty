@@ -12,9 +12,12 @@ export default function Nav(props) {
                 <Link to={"/favorites"}><button className={styles.button}>Favorites</button></Link>
                 <Link to={"/portfolio"}><button className={styles.button}>Portfolio</button></Link>
             </div>
-            <nav className={styles.nav}>
-                <SearchBar onSearch={props.onSearch}/>
-            </nav>
+            <div className={styles.secondDiv}>
+                <nav className={styles.nav}>
+                    <SearchBar onSearch={props.onSearch}/>
+                </nav>
+            </div>
+            
         </div>
     )
 }

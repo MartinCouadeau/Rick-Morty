@@ -1,14 +1,20 @@
 .divPrincipal {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     background-color: rgb(91, 187, 187);
     height: 70px;
     width: 98%;
     margin-bottom: 50px;
 }
 
+.secondDiv {
+    display: flex;
+}
+
 .nav {
     position: relative;
-    left: 72em;
+    
     top: 7px;
 }
 
@@ -17,7 +23,6 @@
     width: 110px;
     height: 70px;
     justify-content: space-between;
-    /*flex-direction: column;*/
 }
 
 .button {

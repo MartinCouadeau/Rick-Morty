@@ -4,7 +4,8 @@ const {
     getCharDetail,
     getFav,
     postFav,
-    deleteFav
+    deleteFav,
+    getAllChars
  } = require("../controllers/index")
 
 const router = express.Router()
@@ -12,6 +13,7 @@ const router = express.Router()
 router.get("/character/:id",getCharById)
 router.get("/detail/:detailId",getCharDetail)
 router.get("/fav",getFav)
+router.get("/allCharacters",getAllChars)
 router.post("/fav",postFav)
 router.delete("/fav/:id",deleteFav)
 

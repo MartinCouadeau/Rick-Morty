@@ -1,11 +1,10 @@
+const { Favorite } = require("../DB_connection")
 
-const fav = []
-
-const postFav = async (req, res) => { 
+const postFav = async (character) => { 
     try {
-        fav.push(req.body)
-        console.log("fav posts = ", fav)
-        res.status(200).json(req.body)
+       const newFav = await Favorite.create(character)
+
+       return newFav
     } catch (error) {
         res.status(500).end(error.message)
     }
